@@ -99,5 +99,26 @@ namespace MusicLibrary2
 
             return albumsToReturn;
         }
+
+        public int addNewAlbum(Album a)
+        {
+            //Attempt Connection to SQL server
+            SqlConnection connection  =  new SqlConnection(connString);
+            connection.Open();
+
+            //define SQL statement to insert new album
+            SqlCommand command = new SqlCommand(
+                "INSERT INTO albums(albumName, albumArtist, albumYear, albumDesc, albumURL) VALUES(@albumname, @albumartist, @albumyear, @albumdesc, @albumurl", connection);
+            command.Parameters.AddWithValue("@albumname",   a.AlbumName);
+            command.Parameters.AddWithValue("@albumartist", a.AlbumArtist);
+            command.Parameters.AddWithValue("@albumyear",   a.AlbumYear);
+            command.Parameters.AddWithValue("@albumdesc",   a.AlbumDesc);
+            command.Parameters.AddWithValue("@albumURL",    a.AlbumURL);
+
+            int numRows = command.ExecuteNonQuery();
+            connection.Close();
+
+            return numRows;
+        }
     }
 }

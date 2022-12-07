@@ -22,3 +22,9 @@ C:\Users\Chadwick Acison\Desktop\AWD1100-Fall2022-ChadAcison\GarthBrooksProject\
 C:\Users\Chadwick Acison\Desktop\AWD1100-Fall2022-ChadAcison\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\obj\Debug\MusicLibrary2.csproj.CoreCompileInputs.cache
 C:\Users\Chadwick Acison\Desktop\AWD1100-Fall2022-ChadAcison\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\obj\Debug\MusicLibrary2.dll
 C:\Users\Chadwick Acison\Desktop\AWD1100-Fall2022-ChadAcison\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\obj\Debug\MusicLibrary2.pdb
+C:\Users\Chadwick Acison\Desktop\GarthProject\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\bin\Debug\MusicLibrary2.dll
+C:\Users\Chadwick Acison\Desktop\GarthProject\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\bin\Debug\MusicLibrary2.pdb
+C:\Users\Chadwick Acison\Desktop\GarthProject\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\obj\Debug\MusicLibrary2.csproj.AssemblyReference.cache
+C:\Users\Chadwick Acison\Desktop\GarthProject\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\obj\Debug\MusicLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\Chadwick Acison\Desktop\GarthProject\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\obj\Debug\MusicLibrary2.dll
+C:\Users\Chadwick Acison\Desktop\GarthProject\GarthBrooksProject\GarthBrooksSolution\MusicLibrary2\obj\Debug\MusicLibrary2.pdb

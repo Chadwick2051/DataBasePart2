@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumImages.cs" />
     <Compile Include="frmMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +106,7 @@
     <Content Include="images\garth13.jpg" />
     <Content Include="images\garth14.jpg" />
     <Content Include="images\garth15.jpg" />
+    <Content Include="sound.wav" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MusicLibrary2\MusicLibrary2.csproj">

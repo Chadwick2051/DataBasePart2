@@ -38,6 +38,7 @@ namespace GarthBrooksProject
             //connect list of albums to DGV
             albumBindingSource.DataSource = albumsDAO.GetSearchAlbums(txtAlbumSearch.Text);
             dgvAlbums.DataSource = albumBindingSource;
+            pbCurrentAlbum.Image = null;
         }
 
 
@@ -64,8 +65,41 @@ namespace GarthBrooksProject
             DataGridView dgv = (DataGridView)sender;
             int rowClicked = dgv.CurrentRow.Index;
             string imageURL = dgv.Rows[rowClicked].Cells[5].Value.ToString();
-            pbCurrentAlbum.Load(imageURL);
+            pbCurrentAlbum.Load(AlbumImages.images[rowClicked+1]);
 
+        }
+
+        private void BTNadd_Click(object sender, EventArgs e)
+        {
+            addAlbumToAlbumsTable();
+        }
+
+        private void addAlbumToAlbumsTable()
+        {
+            // create new album out of elements typed on main page
+            Album album = new Album
+            {
+                AlbumName = txtName.Text,
+                AlbumArtist = txtArt.Text,
+                AlbumYear = Int32.Parse(txtYear.Text),
+                AlbumDesc = txtdesc.Text,
+                AlbumURL  = txtURL.Text
+            };
+
+            AlbumsDAO albumsDAO = new AlbumsDAO();
+            int result = albumsDAO.addNewAlbum(album);
+            MessageBox.Show("Number of new albums Inserted: " + result.ToString(), "NEW RECORD INSERTED?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            clearOutAndAddNewRecordsFields();
+        }
+
+        private void clearOutAndAddNewRecordsFields()
+        {
+            txtName.Text = "";
+            txtArt.Text = "";
+            txtdesc.Text = "";
+            txtURL.Text = "";
+            txtYear.Text = "";
         }
     }
 }
