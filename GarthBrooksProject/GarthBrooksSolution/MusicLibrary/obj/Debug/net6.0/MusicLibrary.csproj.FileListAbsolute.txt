@@ -1,0 +1,12 @@
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\bin\Debug\net6.0\MusicLibrary.deps.json
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\bin\Debug\net6.0\MusicLibrary.dll
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\bin\Debug\net6.0\MusicLibrary.pdb
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\MusicLibrary.csproj.AssemblyReference.cache
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\MusicLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\MusicLibrary.AssemblyInfoInputs.cache
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\MusicLibrary.AssemblyInfo.cs
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\MusicLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\MusicLibrary.dll
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\refint\MusicLibrary.dll
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\MusicLibrary.pdb
+C:\Users\jpscott\Desktop\GarthBrooks\GarthBrooksSolution\MusicLibrary\obj\Debug\net6.0\ref\MusicLibrary.dll
