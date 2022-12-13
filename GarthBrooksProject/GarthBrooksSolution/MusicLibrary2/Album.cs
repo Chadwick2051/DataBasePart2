@@ -11,8 +11,8 @@ namespace MusicLibrary2
         public int ID { get; set; }
         public string AlbumName { get; set; }
         public string AlbumArtist { get; set; }
-        public int AlbumYear { get; set; }
-        public string AlbumURL { get; set; }
+        public int AlbumYear { get; set; }  
         public string AlbumDesc { get; set; }
+        public string AlbumURL { get; set; }
     }
 }

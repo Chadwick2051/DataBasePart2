@@ -1,0 +1,30 @@
+CREATE TABLE AlbumFacts (
+	AlbumName		VARCHAR,
+	ReleaseDate      	VARCHAR,
+	Studio	 		VARCHAR(100),
+	Genre			VARCHAR(25),
+	Length  		VARCHAR(50),
+	Label			VARCHAR(50),
+	FOREIGN KEY (AlbumName) 
+								 REFERENCES Albums(AlbumName)
+)
+
+INSERT INTO AlbumFacts
+(AlbumName, ReleaseDate, Studio, Genre, Length, Label)
+VALUES
+('Garth Brooks',	'4-12-1989', 	'Jack's Tracks Recording Studios',	'Country',	'32:43',	'Capitol Nashville'),
+('No Fences',		'8-27-1990',	'Jack's Tracks Recording Studios',	'Country',	'38:29',	'Capitol Nashville'),
+('Ropin the Wind',	'9-2-1991',	'Jack's Tracks Recording Studios',	'Country',	'39:21',	'Capitol Nashville'),
+('Beyond the Season',	'8-25-1992',	'Jack's Tracks Recording Studios',	'Country',	'33:48',	'Liberty'),
+('The Chase',		'9-14-1992', 	'Jack's Tracks Recording Studios',	'Country',	'40:12',	'Liberty'),
+('In Pieces', 		'8-31-1993',	'Jack's Tracks Recording Studios',	'Country',	'40:12',	'Liberty'),
+('Fresh Horses',	'11-21-1995',	'Jack's Tracks Recording Studios',	'Country',	'38:13',	'Capitol Nashville'),
+('Sevens',		'11-25-1997',	'Jack's Tracks Recording Studios',	'Country pop',	'46:01',	'Capitol Nashville'),
+('Garth Brooks in...the Life of Chris Gaines', '9-28-1998', 'N/A', 		'Pop/Alt Rock', '56:23',
+'Capitol'),
+('Garth Brooks & the Magic of Christmas', '11-23-1999', 'Jack's Tracks Recording Studio and Sound Emporium', 'Christmas', '42:53', 'Capitol Nashville'),
+('Scarecrow', 		'9-13-2001',	'Jack's Tracks Recording Studios',	'Country',	'48:21',	'Capitol Nashville'),
+('Man Against Machine', '11-11-2014',	'Allentown Studios',          'Country Pop/Pop Rock', 	'57:43',      	     'RCA / NashvillePearl'),
+('Christmas Together',  '11-11-2016', 	'Allentown Studios',	      'Christmas / Country',	'27:56', 'Pearl / Gwendolyn'),
+('Gunslinger', 		'11-25-2016',	'Allentown Studios / Nashville', 'Country',		'35:04',	 'Pearl'),
+('Fun', '11-20-2020', 'N/A', 'Country', '49:30', 'Pearl')

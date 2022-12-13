@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MusicLibrary2
 {
@@ -100,25 +102,89 @@ namespace MusicLibrary2
             return albumsToReturn;
         }
 
-        public int addNewAlbum(Album a)
+        public List<Facts> GetAlbumFacts(string search)
         {
+            string term = "";
+
+            //Start w/ empty list
+            List<Facts> FactsToReturn = new List<Facts>();
+
             //Attempt Connection to SQL server
-            SqlConnection connection  =  new SqlConnection(connString);
+            SqlConnection connection = new SqlConnection(connString);
+
+            //Open Server connection
             connection.Open();
 
-            //define SQL statement to insert new album
-            SqlCommand command = new SqlCommand(
-                "INSERT INTO albums(albumName, albumArtist, albumYear, albumDesc, albumURL) VALUES(@albumname, @albumartist, @albumyear, @albumdesc, @albumurl", connection);
-            command.Parameters.AddWithValue("@albumname",   a.AlbumName);
-            command.Parameters.AddWithValue("@albumartist", a.AlbumArtist);
-            command.Parameters.AddWithValue("@albumyear",   a.AlbumYear);
-            command.Parameters.AddWithValue("@albumdesc",   a.AlbumDesc);
-            command.Parameters.AddWithValue("@albumURL",    a.AlbumURL);
+            string searchPhrase = "%" + term + "%";
 
-            int numRows = command.ExecuteNonQuery();
+            //define SQL statement to get all albums
+            SqlCommand command = new SqlCommand();
+            command.CommandText =
+                "SELECT * FROM Facts WHERE AlbumName LIKE @term";
+            command.Parameters.AddWithValue("@term", searchPhrase);
+            command.Connection = connection;
+
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                //build albums in Album class
+                while (reader.Read())
+                {
+                    Facts a = new Facts
+                    {
+                        AlbumName = reader.GetString(0),
+                        ReleaseDate = reader.GetString(1),
+                        Studio = reader.GetString(2),
+                        Genre = reader.GetString(3),
+                        Length = reader.GetString(4),
+                        Label = reader.GetString(5)
+                    };
+
+                    FactsToReturn.Add(a);
+                }
+            }
+            //Clsoe connection to server
             connection.Close();
 
-            return numRows;
+            return FactsToReturn;
         }
+
+        //public List<Song> getSongsForAlbum(int albumID)
+        //{
+        //    //Empty List
+        //    List<Song> songsToReturn = new List<Song>();
+
+        //    //Attempt connection
+        //    SqlConnection connection = new SqlConnection(connString);
+
+        //    //open said connection
+        //    connection.Open();
+
+        //    //define SQL statement
+        //    SqlCommand command = new SqlCommand();
+        //    command.CommandText =
+        //        "SELECT * FROM songs WHERE AlbumID = @albumID";
+        //    command.Parameters.AddWithValue("@albumID", albumID);
+        //    command.Connection = connection;
+
+        //    using (SqlDataReader reader = command.ExecuteReader())
+        //    {
+        //        while (reader.Read())
+        //        {
+        //            Song s = new Song
+        //            {
+        //                AlbumID = reader.GetInt32(0),
+        //                SongNumber = reader.GetInt32(1),
+        //                SongName = reader.GetString(2),
+        //                SongDuration = reader.GetString(3)
+        //            };
+        //            songsToReturn.Add(s);
+        //        }
+        //    }
+        //    connection.Close();
+
+        //    return songsToReturn;
+        //}
+
+
     }
 }
